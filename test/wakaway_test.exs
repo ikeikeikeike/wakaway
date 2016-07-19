@@ -1,22 +1,7 @@
-# Wakaway
+defmodule WakawayTest do
+  use ExUnit.Case
+  doctest Wakaway
 
-Provide Walker's Alias Method and WeightedChoice.
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `wakaway` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:wakaway, "~> 0.1.0"}]
-    end
-    ```
-
-## Usage
-
-```elixir
   test "Wakaway.walkers_alias_method" do
     Enum.map(0..100, fn _ -> Wakaway.walkers_alias_method([1, 2, 3, 50, 100, 200], [1, 2, 3, 50, 100, 200]) end)
   end
@@ -82,4 +67,4 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     assert 90 < count
   end
 
-```
+end
